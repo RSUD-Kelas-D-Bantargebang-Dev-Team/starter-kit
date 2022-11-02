@@ -1,66 +1,67 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h2 align="center">Starter Kit App.</h2>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Table of Contents
+1. [Dependency](#dependency)
+2. [Setup](#setup)
+3. [Usage](#usage)
+4. [License](#license)
 
-## About Laravel
+## Dependency
+- PHP ^8.x - [PHP 8](https://www.php.net/releases/8.1/en.php)
+- Laravel ^9.x - [Laravel 9](https://laravel.com/docs/9.x)
+- Forify ^1.x - [Fortify](https://laravel.com/docs/9.x/fortify)
+- Yajra Datatables ^10.x - [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/10.0)
+- Spatie ^5.x - [Spatie Permission](https://spatie.be/docs/laravel-permission/v5/introduction)
+- Debugbar ^3.x [Debugbar](https://github.com/barryvdh/laravel-debugbar)
+- Mazer ^2.x [Mazer](https://github.com/zuramai/mazer)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Setup
+1. Clone or download
+```shell
+git clone https://github.com/RSUD-Kelas-D-Bantargebang-Dev-Team/starter-kit.git
+```
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+2. Install laravel dependency
+```sh
+composer install
+```
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+3. Create copy of ```.env```
+```sh
+cp .env.example .env
+```
 
-## Learning Laravel
+4. Generate laravel key
+```sh
+php artisan key:generate
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+5. Set database name and account in ```.env```
+```sh
+DB_DATABASE=starter
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+6.  Run Laravel migrate and seeder
+```sh
+php artisan migrate --seed
+``` 
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+7. Create the symbolic link
+```sh
+php artisan storage:link
+``` 
 
-## Laravel Sponsors
+8. Start development server
+```sh
+php artisan serve
+``` 
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Usage
+- Email: admin@gmail.com
+- Password: password
 
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+[MIT License](./LICENSE)
